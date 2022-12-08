@@ -1,4 +1,4 @@
-
+### NOT SOLVED ###
 
 def solver(filename: str):
     f = open(filename, 'r')
@@ -53,5 +53,6 @@ def solver(filename: str):
 
 if __name__ == "__main__":
     result_task_1, result_task_2 = solver("day7/test_data.txt")
+    print("Note: This implementation does not obtain the correct solutions.")
     print("Solution to task 1 is:", result_task_1)
     print("Solution to task 2 is:", result_task_2)

@@ -14,15 +14,12 @@ def solver(file_name: str) -> float:
     f = open(file_name, 'r')
     highest_scores = [0, 0, 0]
     current_number = 0
-    entry = f.readline()
-    while entry:
-        if entry == "\n":
+    for line in f.readlines():
+        if line == "\n":
             highest_scores = check_number(current_number, highest_scores)
             current_number = 0
-            entry = f.readline()
             continue
-        current_number += int(entry)
-        entry = f.readline()
+        current_number += int(line)
     highest_scores = check_number(current_number, highest_scores)
     return highest_scores
 
