@@ -21,6 +21,7 @@ def solver(file_name: str) -> float:
             continue
         current_number += int(line)
     highest_scores = check_number(current_number, highest_scores)
+    f.close()
     return highest_scores
 
 if __name__ == "__main__":

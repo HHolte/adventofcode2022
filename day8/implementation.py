@@ -1,19 +1,6 @@
 import numpy as np
 
 
-def alternative_solver(filename: str):
-    f = open(filename, 'r')
-    data_list = []
-    for line in f.readlines():
-        line = line.strip('\n')
-        data_list.append([int(height) for height in line])
-    data_matrix = np.array(data_list)
-    n_rows, n_columns = data_matrix.shape
-    visible_trees = []
-    for i in range(1, n_rows):
-        tallest = max(data_matrix[i, :])
-
-
 def get_visibility_status_and_scenic_score(data_row, current_element, backwards = False):
     visible = True
     scenic_score = -1
@@ -51,6 +38,7 @@ def solver(filename: str):
             scenic_scores.append(scenic_score)
     n_visible_trees += 2 * n_rows + 2 * n_columns - 4
     scenic_score = max(scenic_scores)
+    f.close()
     return n_visible_trees, scenic_score
 
 

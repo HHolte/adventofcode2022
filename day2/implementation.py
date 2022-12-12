@@ -40,6 +40,7 @@ def solver(file_name: str):
     for line in f.readlines():
         total_score_move_based += score_round_move_based(OpponentMove[line[0]], MyMove[line[2]])
         total_score_outcome_based += score_round_outcome_based(OpponentMove[line[0]], line[2])
+    f.close()
     return total_score_move_based, total_score_outcome_based
 
 

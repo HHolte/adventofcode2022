@@ -25,6 +25,7 @@ def solver(filename: str):
         if len(shared_items) == 1:
             sum_of_priorities_badge += get_priority_from_character(shared_items)
             shared_items = ""
+    f.close()
     return sum_of_priorities_single, sum_of_priorities_badge
 
 

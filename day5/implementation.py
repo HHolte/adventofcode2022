@@ -44,6 +44,7 @@ def solver(filname: str):
         stacks[to_stack] = updated_to_stack
         stacks_for_crane_9001[from_stack] = updated_from_stack_crane_9001
         stacks_for_crane_9001[to_stack] = updated_to_stack_crane_9001
+    f.close()
     return "".join([stack[-1] for stack in stacks.values() if stack]), "".join([stack[-1] for stack in stacks_for_crane_9001.values() if stack]) 
 
 if __name__ == "__main__":

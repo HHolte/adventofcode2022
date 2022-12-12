@@ -42,6 +42,7 @@ def solver(filename: str):
         if size >= 1198493:
             potential_delete_directory_sizes.append(size)
     best_delete_size = min(potential_delete_directory_sizes)
+    f.close()
     return total_sum_of_relevant_directories, best_delete_size
     # Find bottom directory by finding last cd, say it's called d
     # Sum names of all files up to ls statement, call the sum S_d

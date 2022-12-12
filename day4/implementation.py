@@ -11,10 +11,11 @@ def solver(filename: str):
         number_of_complete_overlaps += complete_overlap
         total_number_of_overlaps += (sections[2] <= sections[0] <= sections[3]) ^ (sections[2] <= sections[1] <= sections[3]) and not complete_overlap
     total_number_of_overlaps += number_of_complete_overlaps
+    f.close()
     return number_of_complete_overlaps, total_number_of_overlaps
 
 
 if __name__ == "__main__":
-    result_task_1, result_task_2 = solver("day4/test_data.txt")
+    result_task_1, result_task_2 = solver("day4/input4.txt")
     print("Solution to task 1 is:", result_task_1)
     print("Solution to task 2 is:", result_task_2)

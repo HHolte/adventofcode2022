@@ -7,6 +7,7 @@ def solver(filename: str, number_of_uniques: int):
         if len(set(window)) == number_of_uniques:
             break
         window = window[1:] + line[i]
+    f.close()
     return i
 
 
